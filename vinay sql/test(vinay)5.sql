@@ -1,0 +1,9 @@
+SELECT COUNT(*) FROM users WHERE gender = 'female';
+SELECT MIN(salary) AS MIN_Salary , MAX(salary) AS max_salary FROM users;
+SELECT SUM(salary) AS total from users;
+SELECT avg(salary) FROM users;
+SELECT COUNT(*), gender,AVG(salary) as avg_salary,SUM(salary) AS toatl FROM users group by gender;
+-- ,ROUND(SALARY) AS ROUNDS, CEIL(SALARY) AS CEILS,FLOOR(SALARY) AS FLOORS
+SELECT id, gender,DATE_OF_BIRTH, LOWER(NAME),CONCAT(LOWER(NAME),"1231") AS USERNAME, NOW() AS TIME,YEAR(DATE_OF_BIRTH) AS YOB, DAY(DATE_OF_BIRTH) AS DOB,MONTH(DATE_OF_BIRTH) AS MOB FROM users ;
+SELECT NAME,DATE_OF_BIRTH,CURDATE(), DATEDIFF(CURDATE(),DATE_OF_BIRTH) AS DAYS FROM users;
+ 

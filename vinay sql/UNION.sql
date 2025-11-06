@@ -1,0 +1,9 @@
+use test;
+-- select * from address;
+
+select * from USERS;
+SELECT * FROM ADMIN_USERS;
+
+select ID,EMAIL,NAME,'USER' AS ROLE from USERS
+UNION
+SELECT ID,EMAIL,NAME, 'ADMIN' AS ROLE FROM ADMIN_USERS ORDER BY ID DESC;
